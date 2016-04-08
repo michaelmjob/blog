@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh_CN">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %></title>
+</head>
+<body>
+    <form action="login" method="post">
+        <p>
+            <h4>username:</h4>
+        </p>
+        <input type="text" name="username"/>
+        <p>
+            <h4>password:</h4>
+        </p>
+        <input type="password" name="password"/>
+        <input type="submit" value="Login"/>
+        <% if (message) { %>
+            <span style="color: red"><%= message %></span>
+        <% } %>
+    </form>
+</body>
+</html>
