@@ -1,8 +1,28 @@
 body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
 a {
-  color: #00B7FF;
+    color: #00B7FF;
+}
+
+.header {
+    width: 100%;
+    height: 45px;
+    background-color: #00B7FF;
+}
+
+.footer {
+    width: 100%;
+    height: 30px;
+    background-color: cadetblue;
+}
+
+.main-content {
+    background-color: gainsboro;
+}
+
+.menu {
+    background-color: aquamarine;
 }

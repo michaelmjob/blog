@@ -27,10 +27,27 @@ router.post('/login', function(req, res) {
     }
 });
 
+router.get('/list', function(req, res) {
+    res.render('list', {total: 5, rows: [{
+        id: 1,
+        title: 'wget的基本用法',
+        createTime: '2016-04-08 12:12:12',
+        content: 'wget的基本用法wget的基本用法wget的基本用法wget的基本用法wget的基本用法wget的基本用法'
+    }, {
+        id: 2,
+        title: 'wget的基本用法',
+        createTime: '2016-04-08 12:12:12',
+        content: 'wget的基本用法wget的基本用法wget的基本用法wget的基本用法wget的基本用法wget的基本用法'
+    }, {
+        id: 3,
+        title: 'wget的基本用法',
+        createTime: '2016-04-08 12:12:12',
+        content: 'wget的基本用法wget的基本用法wget的基本用法wget的基本用法wget的基本用法wget的基本用法'
+    }]})
+});
+
 function checkLogin(req, res, next) {
-    console.log('checkLogin');
-    console.log(req.session.login);
-    if (req.session.login != 'undefined' && req.session.login) {
+    if (req.session.login) {
         console.log('已登录...');
         next();
     } else {
@@ -39,9 +56,7 @@ function checkLogin(req, res, next) {
 }
 
 function checkNotLogin(req, res, next) {
-    console.log('checkLogin');
-    console.log(req.session.login);
-    if (req.session.login == undefined || !req.session.login) {
+    if (!req.session.login) {
         console.log('未登录...');
         next();
     } else {

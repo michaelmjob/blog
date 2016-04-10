@@ -15,8 +15,8 @@
         </p>
         <input type="password" name="password"/>
         <input type="submit" value="Login"/>
-        <% if (message) { %>
-            <span style="color: red"><%= message %></span>
+        <% if (typeof message != 'undefined') { %>
+            <span style="color: red"><%= message %>></span>
         <% } %>
     </form>
 </body>

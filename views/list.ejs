@@ -1,0 +1,17 @@
+<div id="blog-list" class="list-group">
+    <% for(var i = 0; i < rows.length; i++) { %>
+        <div class="list-group-item">
+            <div id="list" class="panel panel-info">
+                <div class="panel-heading">
+                    <h4><%= rows[i].title %></h4>
+                </div>
+                <div class="panel-body">
+                    <%= rows[i].content %>
+                </div>
+                <div class="panel-footer">
+                    发表于 <%= rows[i].createTime %>
+                </div>
+            </div>
+        </div>
+    <% } %>
+</div>
